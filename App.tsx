@@ -1,36 +1,21 @@
+import {Text, SafeAreaView, ScrollView} from 'react-native';
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import FlatCards from './components/FlatCards';
+import ElevatedCards from './components/ElevatedCards';
+// import FancyCards from './components/FancyCards';
+import ActionCard from './components/ActionCard';
 
-function App(): React.JSX.Element {
+
+const App = () => {
   return (
     <SafeAreaView>
-      <View style={styles.sectionContainer}>
-        <Text style={styles.sectionTitle}>Namaste Sushant!!</Text>
-      </View>
+      <ScrollView>
+        <FlatCards />
+        <ElevatedCards />
+        <ActionCard />
+      </ScrollView>
     </SafeAreaView>
   );
-}
-
-const styles = StyleSheet.create({
-  rootContainer: {
-    backgroundColor: '#0000ff',
-  },
-  sectionContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+};
 
 export default App;
